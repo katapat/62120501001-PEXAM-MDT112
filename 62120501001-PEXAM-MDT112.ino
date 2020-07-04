@@ -2,6 +2,7 @@ const int buzzer = 8;
 
 void setup(){
   pinMode(buzzer, OUTPUT); 
+  Serial.print("Hello MDT");
 }
 
 void loop(){
