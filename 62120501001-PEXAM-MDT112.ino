@@ -8,6 +8,8 @@
 Adafruit_SSD1306 oled = Adafruit_SSD1306(128, 32, &Wire);
 CytronMD motor1(PWM_PWM, 3, 4);  
 CytronMD motor2(PWM_PWM, 10, 11);
+int buttonState = 0;
+int x;
 void setup(){
   pinMode(buzzer, OUTPUT); 
   tone(8,600,400); 
@@ -26,6 +28,7 @@ void setup(){
   oled.setCursor(20, 10);
   oled.setTextColor(SSD1306_WHITE);
   oled.setTextSize(3);
+  pinMode(2, INPUT);
 
 }
 
@@ -38,5 +41,13 @@ void loop(){
   oled.clearDisplay();
   delay(350); 
   tone(8,600,200); 
+  buttonState = digitalRead(2);
+  if (buttonState == 1) { 
+  for(int i = 0; i <= 5 i++){
+  x = i * 51;
+  motor1.setSpeed(x);
+  motor2.setSpeed(x);
+     }
+  }
               
 }
