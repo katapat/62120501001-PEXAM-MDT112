@@ -43,7 +43,7 @@ void loop(){
   tone(8,600,200); 
   buttonState = digitalRead(2);
   if (buttonState == 1) { 
-  for(int i = 0; i <= 5 i++){
+  for(int i = 0; i <= 5 ;i++){
   x = i * 51;
   motor1.setSpeed(x);
   motor2.setSpeed(x);
