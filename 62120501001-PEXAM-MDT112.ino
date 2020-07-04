@@ -9,6 +9,10 @@ void setup(){
   motor2.setSpeed(-255);
   Serial.print("Turn CCW");
   delay(2000);
+  motor1.setSpeed(255);
+  motor2.setSpeed(255);
+  Serial.print("Turn CW");
+  delay(2500);
 
 }
 
