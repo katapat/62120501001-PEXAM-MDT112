@@ -36,5 +36,7 @@ void loop(){
   oled.display();
   delay(1000);
   oled.clearDisplay();
+  delay(350); 
+  tone(8,600,200); 
               
 }
