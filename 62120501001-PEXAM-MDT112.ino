@@ -1,11 +1,8 @@
-const int buzzer = 8; 
-
 void setup(){
   pinMode(buzzer, OUTPUT); 
-  Serial.print("Hello MDT");
+  tone(8,600,400); 
 }
 
 void loop(){
-  tone(8,600,400);     
-  noTone(buzzer);           
+              
 }
